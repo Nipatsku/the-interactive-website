@@ -1,0 +1,68 @@
+<html>
+<head>
+    <script>
+        let button
+        setTimeout(() => {
+            button = document.getElementById('theButton')
+        }, 500)
+        var titles = [
+            'See?',
+            'This is interactive',
+            'This is still interactive',
+            'Still interactive',
+            'Still interactive',
+            'Still interactive',
+            'STILL interactive',
+            'Yet still interactive',
+            'Still interactive',
+            'Even more interactive',
+            'Still interactive',
+            'Still interactive',
+            'Keeps getting more interactive',
+            'Still interactive',
+            'Still interactive',
+            'Amazingly interactive',
+            'Still interactive',
+            'Still interactive',
+            'What is interactive?',
+            'THIS',
+            'Got you there',
+            'Still interactive',
+            'Still interactive',
+            'Still interactive',
+            'Still interactive',
+            'SUPER interactive',
+            'By now, the word \'interactive\' has lost its meaning',
+            'This is still interactive, though',
+            'This is interactive',
+            'Still interactive',
+            'Still interactive',
+            'Still interactive',
+            'Still interactive',
+            'Dont stop clicking',
+            'The new titles are written in real time by real people',
+            'I wouldnt sink so deep as to make it repeat itself',
+            'Still interactive',
+            'Still interactive',
+            'Still interactive'
+        ]
+        var i = 0
+        function onClick() {
+            button.innerHTML = titles[i]
+
+            var w = window.innerWidth
+            var h = window.innerHeight
+            button.style.position = 'absolute'
+            button.style.left = `${Math.round((0.1 + Math.random() * 0.8) * w)}px`
+            button.style.top = `${Math.round((0.1 + Math.random() * 0.8) * h)}px`
+            
+            i ++
+            if (i >= titles.length - 1)
+                i = 0
+        }
+    </script>
+</head>
+<body>
+    <p id='theButton' onclick='onClick()'>This is interactive</p>
+</body>
+</html>
